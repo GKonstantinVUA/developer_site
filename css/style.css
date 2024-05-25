@@ -932,23 +932,23 @@ body {
   position: absolute;
   left: 50%;
   top: 0;
-  width: 17.5rem;
+  width: 20rem;
   height: 3px;
   background-image: linear-gradient(90deg,transparent,transparent 50%,var(--colorBg) 50%,var(--colorBg) 80%),linear-gradient(90deg,var(--fontTitleLink),var(--fontTitleLink),var(--fontTitleLink),var(--fontTitleLink),var(--fontTitleLink));
   background-size: 20px 5px,50% 3px;
   border: none
 }
 .infographics__line--down-left {
-  -webkit-transform: rotate(35deg) translate(-210px,450px);
-  transform: rotate(35deg) translate(-210px,450px)
+  -webkit-transform: rotate(40deg) translate(-190px,480px);
+  transform: rotate(40deg) translate(-190px,480px)
 }
 .infographics__line--down-right {
-  -webkit-transform: rotate(30deg) translate(260px,135px);
-  transform: rotate(30deg) translate(260px,135px)
+  -webkit-transform: rotate(34deg) translate(260px,135px);
+  transform: rotate(34deg) translate(260px,135px)
 }
 .infographics__line--up {
-  -webkit-transform: rotate(-33.8deg) translate(-250px,140px);
-  transform: rotate(-33.8deg) translate(-250px,140px)
+  -webkit-transform: rotate(-37deg) translate(-300px,115px);
+  transform: rotate(-37deg) translate(-300px,115px)
 }
 .infographics__box {
   position: relative;
@@ -1688,8 +1688,8 @@ body {
 }
 @media (max-width:70em) {
   .infographics__line--down-right {
-    -webkit-transform: rotate(31deg) translate(260px,140px);
-    transform: rotate(31deg) translate(260px,140px)
+    -webkit-transform: rotate(35deg) translate(260px,130px);
+    transform: rotate(35deg) translate(260px,130px)
   }
 }
 @media (max-width:55em) {
@@ -1792,8 +1792,8 @@ body {
 }
 @media (max-width:70.625em) {
   .infographics__line--down-left {
-    -webkit-transform: rotate(35deg) translate(-200px,450px);
-    transform: rotate(35deg) translate(-200px,450px)
+    -webkit-transform: rotate(39deg) translate(-190px,470px);
+    transform: rotate(39deg) translate(-190px,470px)
   }
 }
 @media (max-width:67.5rem) {
@@ -1803,16 +1803,16 @@ body {
 }
 @media (max-width:66.875em) {
   .infographics__line--down-left {
-    -webkit-transform: rotate(35deg) translate(-200px,440px);
-    transform: rotate(35deg) translate(-200px,440px)
+    -webkit-transform: rotate(40deg) translate(-180px,470px);
+    transform: rotate(40deg) translate(-180px,470px)
   }
   .infographics__line--down-right {
-    -webkit-transform: rotate(31deg) translate(260px,150px);
-    transform: rotate(31deg) translate(260px,150px)
+    -webkit-transform: rotate(35deg) translate(260px,140px);
+    transform: rotate(35deg) translate(260px,140px)
   }
   .infographics__line--up {
-    -webkit-transform: rotate(-33deg) translate(-270px,140px);
-    transform: rotate(-33deg) translate(-270px,140px)
+    -webkit-transform: rotate(-37deg) translate(-290px,120px);
+    transform: rotate(-37deg) translate(-290px,120px)
   }
 }
 @media (max-width:64.25em) {

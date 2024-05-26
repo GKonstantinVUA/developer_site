@@ -1935,9 +1935,6 @@ body {
   .block__main-title {
     text-align: center
   }
-  .block__poster-wrap {
-    aspect-ratio: 400/550
-  }
 }
 @media (max-width:54.1875em) {
   .infographics__line--down-left {

@@ -3272,7 +3272,7 @@
  //! Кнопка яка буде виконувати функції Показати Ще/Сховати. За замовчуванням до неї призначено клас "назва контейнера"__show-more
                 const container = document.querySelector(".skills");
  //!Загальний контейнер в якому містяться всі картки
-                if (!container || showMoreBth || itemArea.length === 0) return;
+                if (!container || !showMoreBtn || itemArea.length === 0) return;
  //!Перевірка на елементи які фактично відсутні
                 let itemsShown = itemsToShow;
  //! Початкова кількість показаних елементів

@@ -670,7 +670,8 @@ body {
   background: var(--colorBg)
 }
 .page--option {
-  padding-bottom: clamp(2.813rem,1.13rem + 8.41vw,7.125rem)
+  padding-bottom: clamp(2.813rem,1.13rem + 8.41vw,7.125rem);
+  padding-top: var(--headerHight)
 }
 .page--option > *:not(:last-child) {
   margin-bottom: clamp(1.875rem,.899rem + 4.88vw,4.375rem)
@@ -1140,13 +1141,14 @@ body {
   background: var(--colorBg)
 }
 .about--setup {
-  padding-bottom: 2.75rem
+  padding-bottom: 2.75rem;
+  padding-top: var(--headerHight)
 }
 .about--setup > *:not(:last-child) {
   margin-bottom: 2.75rem
 }
 .about__option {
-  padding-top: var(--headerHight)
+  min-height: calc(100svh - var(--headerHight))
 }
 .about__container {
   display: flex;
@@ -1262,7 +1264,8 @@ body {
   background: var(--colorBg)
 }
 .proccess--setup {
-  padding-bottom: clamp(2.813rem,1.13rem + 8.41vw,7.125rem)
+  padding-bottom: clamp(2.813rem,1.13rem + 8.41vw,7.125rem);
+  padding-top: var(--headerHight)
 }
 .proccess--setup > *:not(:last-child) {
   margin-bottom: clamp(1.875rem,.899rem + 4.88vw,4.375rem)
@@ -1273,7 +1276,6 @@ body {
   width: 100%;
   align-items: center;
   justify-content: center;
-  padding-top: var(--headerHight);
   border-bottom: .0625rem solid var(--colorDecore)
 }
 .hero__parapgraph {
@@ -1342,7 +1344,8 @@ body {
   background: var(--colorBg)
 }
 .portfolio--setup {
-  padding-bottom: clamp(2.813rem,1.13rem + 8.41vw,7.125rem)
+  padding-bottom: clamp(2.813rem,1.13rem + 8.41vw,7.125rem);
+  padding-top: var(--headerHight)
 }
 .portfolio--setup > *:not(:last-child) {
   margin-bottom: clamp(1.875rem,.899rem + 4.88vw,4.375rem)
@@ -1621,9 +1624,6 @@ body {
   }
 }
 @media (min-width:55.625em) {
-  .about__option {
-    min-height: 100vh
-  }
   .block__contact {
     flex: 0 1 50%;
     align-items: flex-start
@@ -1661,7 +1661,7 @@ body {
     flex: 1 1 42%
   }
   .hero--option {
-    height: 100vh;
+    min-height: calc(100svh - var(--headerHight));
     padding-bottom: 2.8125rem
   }
 }
@@ -1930,7 +1930,8 @@ body {
 }
 @media (max-width:55.62375em) {
   .about__container {
-    flex-direction: column
+    flex-direction: column;
+    padding-top: 2.8125rem
   }
   .block__main-title {
     text-align: center

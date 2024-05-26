@@ -3270,9 +3270,10 @@
  //! Яцейка з карткою
                 const showMoreBtn = document.querySelector(".skills__show-more");
  //! Кнопка яка буде виконувати функції Показати Ще/Сховати. За замовчуванням до неї призначено клас "назва контейнера"__show-more
-                document.querySelector(".skills");
+                const container = document.querySelector(".skills");
  //!Загальний контейнер в якому містяться всі картки
-                let itemsShown = itemsToShow;
+                if (!container || showMoreBth || itemArea.length === 0) return;
+        let itemsShown = itemsToShow;
  //! Початкова кількість показаних елементів
                 function toggleItems() {
             if (window.innerWidth <= 5e3) //! Вказати розмір до якого не буде реалізації Показати Ще/Сховати 

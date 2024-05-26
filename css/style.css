@@ -1622,7 +1622,7 @@ body {
 }
 @media (min-width:55.625em) {
   .about__option {
-    height: 100vh
+    min-height: 100vh
   }
   .block__contact {
     flex: 0 1 50%;

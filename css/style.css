@@ -1788,7 +1788,7 @@ body {
     transform: rotate(-43deg)
   }
   .menu-open .icon-menu::after {
-    bottom: calc(52% - .0625rem);
+    bottom: calc(52% - .125rem);
     -webkit-transform: rotate(43deg);
     transform: rotate(43deg)
   }

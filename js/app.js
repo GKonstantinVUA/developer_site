@@ -1,6 +1,7 @@
 (() => {
     "use strict";
     let bodyLockStatus = true;
+    let header = document.querySelector(".header");
     let bodyLockToggle = (delay = 500) => {
         if (document.documentElement.classList.contains("lock")) bodyUnlock(delay); else bodyLock(delay);
     };
@@ -11,6 +12,7 @@
                 lockPaddingElements.forEach((lockPaddingElement => {
                     lockPaddingElement.style.paddingRight = "";
                 }));
+                header.style.paddingRight = "";
                 document.body.style.paddingRight = "";
                 document.documentElement.classList.remove("lock");
             }), delay);
@@ -28,6 +30,7 @@
                 lockPaddingElement.style.paddingRight = lockPaddingValue;
             }));
             document.body.style.paddingRight = lockPaddingValue;
+            header.style.paddingRight = lockPaddingValue;
             document.documentElement.classList.add("lock");
             bodyLockStatus = false;
             setTimeout((function() {

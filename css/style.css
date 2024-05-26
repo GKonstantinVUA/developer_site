@@ -838,7 +838,7 @@ body {
   height: 2rem
 }
 .box__period {
-  color: var(--colorDecore);
+  color: var(--fontBlockFunction);
   font-size: clamp(1rem,.741rem + .71vw,1.25rem);
   line-height: 1.54;
   letter-spacing: .03125rem

@@ -3273,7 +3273,8 @@
                 const container = document.querySelector(".skills");
  //!Загальний контейнер в якому містяться всі картки
                 if (!container || showMoreBth || itemArea.length === 0) return;
-        let itemsShown = itemsToShow;
+ //!Перевірка на елементи які фактично відсутні
+                let itemsShown = itemsToShow;
  //! Початкова кількість показаних елементів
                 function toggleItems() {
             if (window.innerWidth <= 5e3) //! Вказати розмір до якого не буде реалізації Показати Ще/Сховати 

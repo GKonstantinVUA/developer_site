@@ -683,8 +683,7 @@ body {
   background-color: var(--colorBg)
 }
 #back-title {
-  background-color: var(--bgBackColor);
-  border-radius: .75rem
+  background-color: var(--bgBackColor)
 }
 .hero__container {
   position: relative;
@@ -692,7 +691,8 @@ body {
   width: 100svw;
   height: 100%;
   flex-direction: column;
-  align-items: center
+  align-items: center;
+  padding-right: 1.875rem
 }
 .hero__wrap-title {
   flex: 1 0 100%;
@@ -705,59 +705,45 @@ body {
 .hero__wrap-title:not(:last-child) {
   margin-bottom: 2.5rem
 }
-.hero__inner-front {
-  display: flex;
-  height: 100%;
+.hero__inner {
+  display: grid;
+  min-height: 12.5rem;
   overflow: hidden;
   place-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   text-align: center
 }
-.hero__inner-back {
-  display: flex;
-  height: 100%;
-  overflow: hidden;
-  place-items: center;
+.hero__inner--back {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  text-align: center
+  width: 100%
 }
 .hero__front-page-title {
   color: var(--fontTitleLink);
-  font-weight: 400;
-  letter-spacing: -.09375rem;
   font-size: clamp(3rem,2.386rem + 3.07vw,4.688rem);
   text-align: center;
   line-height: 1;
-  margin: 0 2svw;
-  width: 57.22svw
+  letter-spacing: -.09375rem;
+  padding-right: .9375rem
+}
+.hero__back-page-title {
+  color: var(--fontSubTitleLink);
+  font-size: clamp(3rem,2.386rem + 3.07vw,4.688rem);
+  line-height: 1;
+  letter-spacing: -.09375rem;
+  padding-right: .9375rem
 }
 .hero__front-slogan {
   color: var(--fontSubTitleLink);
   font-size: clamp(3rem,2.386rem + 3.07vw,4.688rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.2;
-  letter-spacing: -1.5px
-}
-.hero__back-page-title {
-  color: var(--fontSubTitleLink);
-  font-weight: 400;
-  letter-spacing: -.09375rem;
-  font-size: clamp(3rem,2.386rem + 3.07vw,4.688rem);
-  text-align: center;
-  line-height: 1;
-  margin: 0 2svw;
-  width: 57.22svw
+  letter-spacing: -.09375rem
 }
 .hero__back-slogan {
   color: var(--fontTitleLink);
   font-size: clamp(3rem,2.386rem + 3.07vw,4.688rem);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2;
   letter-spacing: -1.5px
 }
@@ -1420,15 +1406,6 @@ body {
 .portfolio--setup > *:not(:last-child) {
   margin-bottom: clamp(1.875rem,.899rem + 4.88vw,4.375rem)
 }
-#front-title {
-  z-index: 2;
-  background-color: var(--colorBg);
-  width: 20%
-}
-#back-title {
-  background-color: var(--bgBackColor);
-  border-radius: .75rem
-}
 .hero__wrap-title {
   display: flex;
   width: 100%;
@@ -1448,26 +1425,6 @@ body {
 }
 .hero__front-title-page:not(:last-child) {
   margin-bottom: .4em
-}
-.hero__inner-front {
-  display: grid;
-  height: 100%;
-  overflow: hidden;
-  place-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%
-}
-.hero__inner-back {
-  display: grid;
-  height: 100%;
-  overflow: hidden;
-  place-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%
 }
 .hero__front-title-page {
   color: var(--fontTitleLink);
@@ -1782,6 +1739,14 @@ body {
     justify-content: space-between
   }
 }
+@media (min-width:73.125em) {
+  .hero__front-page-title {
+    width: 71.25rem
+  }
+  .hero__back-page-title {
+    width: 71.25rem
+  }
+}
 @media (min-width:48em) {
   .together__title {
     max-width: clamp(22.5rem,-20.468rem + 89.52vw,43.313rem)
@@ -1850,6 +1815,14 @@ body {
     -webkit-transform: rotate(45deg) translate(-100px,420px);
     transform: rotate(45deg) translate(-100px,420px);
     width: 16.875rem
+  }
+}
+@media (max-width:20em) {
+  .hero__front-page-title {
+    width: 18.125rem
+  }
+  .hero__back-page-title {
+    width: 18.125rem
   }
 }
 @media (max-width:181.25rem) {
@@ -2268,6 +2241,28 @@ body {
   .testimonial__inner-video {
     aspect-ratio: 280/160;
     min-height: 160px
+  }
+}
+@media (min-width:20em) and (max-width:73.125em) {
+  @supports (width:clamp(18.125rem ,-1.875rem + 100vw ,71.25rem)) {
+    .hero__front-page-title {
+      width: clamp(18.125rem ,-1.875rem + 100vw ,71.25rem)
+    }
+  }
+  @supports not (width:clamp(18.125rem ,-1.875rem + 100vw ,71.25rem)) {
+    .hero__front-page-title {
+      width: calc(18.125rem + 53.125 * (100vw - 20rem)/ 53.125)
+    }
+  }
+  @supports (width:clamp(18.125rem ,-1.875rem + 100vw ,71.25rem)) {
+    .hero__back-page-title {
+      width: clamp(18.125rem ,-1.875rem + 100vw ,71.25rem)
+    }
+  }
+  @supports not (width:clamp(18.125rem ,-1.875rem + 100vw ,71.25rem)) {
+    .hero__back-page-title {
+      width: calc(18.125rem + 53.125 * (100vw - 20rem)/ 53.125)
+    }
   }
 }
 @media (any-hover:hover) {

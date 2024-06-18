@@ -678,13 +678,6 @@ body {
 .page--option > *:not(:last-child) {
   margin-bottom: clamp(1.875rem,.899rem + 4.88vw,4.375rem)
 }
-#front-title {
-  z-index: 2;
-  background-color: var(--colorBg)
-}
-#back-title {
-  background-color: var(--bgBackColor)
-}
 .hero__container {
   position: relative;
   display: flex;
@@ -1764,6 +1757,13 @@ body {
   .text-box--content > div:not(:last-child) {
     margin-bottom: 1.875rem
   }
+  #front-title {
+    z-index: 2;
+    background-color: var(--colorBg)
+  }
+  #back-title {
+    background-color: var(--bgBackColor)
+  }
   .testimonial__inner-video {
     flex: 0 1 48%
   }
@@ -2146,6 +2146,9 @@ body {
   }
   .menu__list {
     text-align: center
+  }
+  #back-title {
+    display: none
   }
   .testimonial__box-cadr {
     flex-direction: column;

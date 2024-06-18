@@ -3378,7 +3378,7 @@
     btnUp.addEventListener();
     const left = document.getElementById("front-title");
     const handleMove = e => {
-        left.style.width = `${e.clientX / window.innerWidth * 100}%`;
+        if (window.innerWidth > 768) left.style.width = `${e.clientX / window.innerWidth * 100}%`;
     };
     document.onmousemove = e => handleMove(e);
     document.ontouchmove = e => handleMove(e.touches[0]);
